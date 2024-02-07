@@ -12,7 +12,6 @@ export default function Footer () {
         <Logo style={{color:'#fff'}}/>
         </div>
     </footer>
-     
-  
+
   );
 }
