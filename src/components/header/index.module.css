@@ -1,0 +1,12 @@
+.header {
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+.header .navigation a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0a090d;
+  padding: 0 10px;
+  text-align: center;
+}/*# sourceMappingURL=index.module.css.map */

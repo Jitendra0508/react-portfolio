@@ -1,0 +1,6 @@
+.flexBox {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}/*# sourceMappingURL=index.module.css.map */
