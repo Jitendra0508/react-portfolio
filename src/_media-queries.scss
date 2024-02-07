@@ -1,0 +1,44 @@
+// media scree breackpoints 
+
+$xsmall: 320px;
+$small: 576px;
+$medium: 768px;
+$large: 1024px;
+$extra-large: 1300px;
+
+// mixin for media screen 
+@mixin breackpoint ($breakpoint) {
+    @if ($breakpoint ==xsmall) {
+        @media (min-width: $xsmall) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==small) {
+        @media (min-width: $small) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==medium) {
+        @media (min-width: $medium) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==large) {
+        @media (min-width: $large) {
+            @content;
+        }
+    }
+
+    @else if ($breakpoint ==xlarge) {
+        @media (min-width: $extra-large) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+    }
+}

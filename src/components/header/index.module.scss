@@ -1,0 +1,18 @@
+@import '../../Variables';
+
+.header {
+    padding: 20px 0;
+    background-color: $white-color;
+    .navigation {
+        a {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            color: $bg-color;
+            padding: 0 10px;
+            text-align: center;
+
+        }
+
+    }
+}
