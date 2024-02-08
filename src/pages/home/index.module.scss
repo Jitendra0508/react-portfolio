@@ -1,11 +1,44 @@
 @import '../../Variables';
 @import '../../media-queries';
-
-.banner{
+.hopaPage{
     background-image: url(../../images/banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     width: 100%;
+}
+.innerText {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    background-color: #1a1826c2;
+    padding: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .mainTitle {
+        color: $white-color;
+        margin-bottom: 24px;
+        font-size: 45px;
+
+        .designation {
+            color: $golden-color;
+        }
+
+        .name {}
+    }
+
+    .decription {
+        color: $white-color;
+        max-width: 680px;
+    }
+
+    .gifImg {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }

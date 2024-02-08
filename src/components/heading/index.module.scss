@@ -1,0 +1,11 @@
+@import '../../Variables';
+@import '../../media-queries';
+.bannerTitle{
+    color: $white-color;
+    margin-bottom: 24px;
+    font-size: 45px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px solid $golden-color;
+    padding-bottom: 5px;
+}

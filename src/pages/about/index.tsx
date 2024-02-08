@@ -1,8 +1,14 @@
 import * as React from 'react';
-export default function About () {
+import Banner from '../../components/banner';
+import Heading from '../../components/heading';
+import style from './index.module.scss';
+export default function About() {
   return (
-    <div>
-      <h1>this is about us page</h1>
-    </div>
+    <Banner>
+      <div className={style.aboutMe}>
+        <Heading heading='About Me' />
+        <p className={style.decription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur vero omnis necessitatibus dolorem saepe eum molestias nemo quidem ipsa doloremque commodi dolorum incidunt debitis, accusamus fugit molestiae consectetur obcaecati!</p>
+      </div>
+    </Banner>
   );
 }

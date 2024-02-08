@@ -1,8 +1,7 @@
 import * as React from 'react';
+import Banner from '../../components/banner';
 export default function Contact () {
   return (
-    <div>
-      <h1>this is Contact us page</h1>
-    </div>
+ <Banner></Banner>
   );
 }
