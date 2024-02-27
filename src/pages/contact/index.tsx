@@ -6,10 +6,9 @@ export default function Contact () {
   return (
     <Banner>
         <div className={style.aboutMe}>
-        <Heading heading='Contack us' />
+        <Heading heading='Contact Us' />
         <p className={style.decription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aspernatur vero omnis necessitatibus dolorem saepe eum molestias nemo quidem ipsa doloremque commodi dolorum incidunt debitis, accusamus fugit molestiae consectetur obcaecati!</p>
       </div>
-      
     </Banner>
 
   );

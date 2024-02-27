@@ -6,11 +6,11 @@
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
-    background-color: $black-bg-color;
+    background-color: $bg-color;
     padding: 15px 0;
     width: 100%;
     .bannerText {
         position: relative;
-        height: calc(100vh - 177px);
+        // height: calc(100vh - 177px);
     }
 }

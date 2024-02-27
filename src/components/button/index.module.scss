@@ -1,12 +1,45 @@
 @import '../../Variables';
+@import '../../mixin';
 .button{
     border: 0;
-    background-color: $white-color;
-    color: $bg-color;
-    border-radius: 30px;
+    // background-color: $white-color;
+    @include smallBox;
+    color: $white-color;
+    // border-radius: 30px;
     font-size: 16px;
     padding: 15px 30px;
     cursor: pointer;
+    position: relative;
+    min-width: 120px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    &:hover .childSpan{
+        transform: translateY(-50%);
+    }
+    &:hover .childSecChild{
+        transform: translateY(0);
+    }
+    .childSpan{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $white-color;
+        transform: translateY(0);
+        transition: 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+
+    }
+    .childSecChild{
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $white-color;
+        transform: translateY(-50%);
+        transition: 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
 }
 .secondary{
     background-color: $bg-color;

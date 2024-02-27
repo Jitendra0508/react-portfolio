@@ -15,38 +15,32 @@ export default function Sidebar() {
     const navlink = [
         {
             link: 'Home',
+            icon: <i className="bi bi-house-door"></i>,
             to: '/'
         },
         {
             link: 'About',
+            icon: <i className="bi bi-people-fill"></i>,
             to: '/about',
-            icon: 'icons',
-            sum: [
-                {
-                    link: 'About inner',
-                    to: '/about-inner',
-                },
-                {
-                    link: 'contact inner',
-                    to: '/contact-inner',
-                },
-            ]
-
         },
         {
             link: 'What I do',
+            icon: <i className="bi bi-card-checklist"></i>,
             to: '/what-do'
         },
         {
             link: 'My Resume',
+            icon: <i className="bi bi-box-seam-fill"></i>,
             to: '/resume'
         },
         {
             link: 'Portfolio',
+            icon: <i className="bi bi-ui-checks-grid"></i>,
             to: '/portfolio'
         },
         {
             link: 'Contact',
+            icon: <i className="bi bi-person-rolodex"></i>,
             to: '/contact'
         },
 
@@ -55,7 +49,7 @@ export default function Sidebar() {
         <>
             <div className={style.sidebar}>
                 <div className={style.innerSidebar}>
-                    <FlexBox style={{ flexDirection: 'column', justifyContent: "space-around", height: '100vh' }}>
+                    <FlexBox style={{ flexDirection: 'column', justifyContent: "space-around" }}>
                         <div className={style.profile}>
                             <span><b>Team</b></span>
                         </div>
@@ -66,30 +60,8 @@ export default function Sidebar() {
                                         return (
                                             <>
                                                 <li key={i} className={style.innerMenu}>
-                                                    {/* <NavLink to={item.to}>{item.link} <span onClick={addEvent}>{item.icon}</span></NavLink> */}
-                                                    <SlideToggle
-                                                        trigger={<NavLink to={item.to}>{item.link} <span>{item.icon}</span></NavLink>}
-                                                        easing="easeOutQuad"
-                                                        duration={1000}
-                                                        expanded={false}
-                                                    >
-                                                        {
-                                                            item.sum?.map((item, i) => {
-                                                                return (
-                                                                    <>
-                                                                        <li key={i}>
-
-                                                                            < NavLink to={item.to}>{item.link}</NavLink>
-                                                                        </li >
-
-                                                                    </>
-                                                                )
-                                                            })
-                                                        }
-
-                                                    </SlideToggle>
+                                                    <NavLink to={item.to}><span style={{ display: 'none' }}>{item.link}</span>{item.icon}</NavLink>
                                                 </li >
-
                                             </>
                                         )
                                     })

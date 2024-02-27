@@ -1,5 +1,6 @@
 @import '../src/Variables';
 @import '../src/media-queries';
+@import '../src/mixin';
 
 body {
   margin: 0;
@@ -9,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background-color: $bg-color;
+  background-color: #040404;
   // color: $white-color;
 
   // @include breackpoint(small) {
@@ -36,4 +37,5 @@ li {
 }
 .active{
   color: $light-violet !important;
+  @include innerBox;
 }

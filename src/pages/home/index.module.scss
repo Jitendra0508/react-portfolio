@@ -1,20 +1,40 @@
 @import '../../Variables';
 @import '../../media-queries';
+@import '../../mixin';
 .hopaPage{
     background-image: url(../../images/banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    position: relative;
+    &::after{
+        content: '';
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #040404c7;
+    }
+    .bannerClass{
+        @include box;
+        padding: 24px;
+    }
+    .profile{
+        @include innerBox;
+        padding: 16px;
+        min-height: 367.33px;
+    }
 }
 .innerText {
-    position: absolute;
+    // position: absolute;
     left: 0;
     top: 50%;
     width: 100%;
-    transform: translateY(-50%);
-    background-color: #1a1826c2;
-    padding: 40px;
+    // transform: translateY(-50%);
+  @include box;
+    padding: 16px;
     border-radius: 5px;
     overflow: hidden;
 
@@ -41,4 +61,14 @@
         top: 50%;
         transform: translateY(-50%);
     }
+}
+.availabily{
+    @include innerBox;
+    justify-content: space-between;
+    .availabilyBox{
+        @include smallBox;
+        padding: 16px;
+        color: $white-color;
+    }
+   
 }
