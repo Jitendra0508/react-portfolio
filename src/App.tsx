@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <FlexBox style={{ alignItems: 'flex-start' }}>
-        {/* <Sidebar /> */}
+        <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -25,7 +25,6 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/what-do" element={<WhatDo />} />
           </Routes>
-
       </FlexBox>
       <Footer/>
     </div>

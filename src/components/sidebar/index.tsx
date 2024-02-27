@@ -3,9 +3,15 @@ import { Link, NavLink } from 'react-router-dom';
 import FlexBox from '../flexbox';
 import style from './index.module.scss';
 import Button from '../button';
+import { SlideToggle } from 'react-smooth-slide-toggle';
 
 
 export default function Sidebar() {
+    const [active, setActive] = React.useState(true);
+
+    const addEvent = () => {
+        setActive(current => !current);
+    }
     const navlink = [
         {
             link: 'Home',
@@ -13,7 +19,19 @@ export default function Sidebar() {
         },
         {
             link: 'About',
-            to: '/about'
+            to: '/about',
+            icon: 'icons',
+            sum: [
+                {
+                    link: 'About inner',
+                    to: '/about-inner',
+                },
+                {
+                    link: 'contact inner',
+                    to: '/contact-inner',
+                },
+            ]
+
         },
         {
             link: 'What I do',
@@ -47,7 +65,31 @@ export default function Sidebar() {
                                     navlink.map((item, i) => {
                                         return (
                                             <>
-                                                <NavLink key={i} to={item.to}>{item.link}</NavLink>
+                                                <li key={i} className={style.innerMenu}>
+                                                    {/* <NavLink to={item.to}>{item.link} <span onClick={addEvent}>{item.icon}</span></NavLink> */}
+                                                    <SlideToggle
+                                                        trigger={<NavLink to={item.to}>{item.link} <span>{item.icon}</span></NavLink>}
+                                                        easing="easeOutQuad"
+                                                        duration={1000}
+                                                        expanded={false}
+                                                    >
+                                                        {
+                                                            item.sum?.map((item, i) => {
+                                                                return (
+                                                                    <>
+                                                                        <li key={i}>
+
+                                                                            < NavLink to={item.to}>{item.link}</NavLink>
+                                                                        </li >
+
+                                                                    </>
+                                                                )
+                                                            })
+                                                        }
+
+                                                    </SlideToggle>
+                                                </li >
+
                                             </>
                                         )
                                     })
@@ -57,7 +99,7 @@ export default function Sidebar() {
                         <Button color='primary'>Contact</Button>
                     </FlexBox>
                 </div>
-            </div>
+            </div >
         </>
 
     );
